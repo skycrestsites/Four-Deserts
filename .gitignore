@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Local template reference (keeps its own git history)
+style 1/
+
+# Working source files (not part of the deployed site)
+Stock images/
+four deserts logo.jpg
+four-deserts-cleaning-co-llc-website-brief*.md
+
+# Test / build artifacts
+shot.mjs
+shot-*.png
+package.json
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+{
+  "name": "Four Deserts Cleaning Co. LLC",
+  "short_name": "Four Deserts",
+  "description": "Premium house and commercial cleaning in Las Cruces and surrounding areas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0e3ee0",
+  "icons": [
+    {
+      "src": "assets/images/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
