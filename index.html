@@ -143,7 +143,24 @@
 
       <nav class="nav" aria-label="Primary">
         <div class="nav-links">
-          <a href="#services">Services</a>
+          <div class="nav-item has-dropdown">
+            <button class="nav-dd-toggle" aria-haspopup="true" aria-expanded="false">
+              Services
+              <svg class="svg-icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="services/house-cleaning.html"><span class="dd-ic"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></span>Regular House Cleaning</a>
+              <a href="services/deep-cleaning.html"><span class="dd-ic"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2 15 9l7 .5-5.5 4.5 2 7L12 17l-6.5 4 2-7L2 9.5 9 9z"/></svg></span>Deep Cleaning</a>
+              <a href="services/move-in-out.html"><span class="dd-ic"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 7h11v10H3z"/><path d="M14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></span>Move In &amp; Move Out</a>
+              <a href="services/commercial-cleaning.html"><span class="dd-ic"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M4 21V4h10v17"/><path d="M14 9h6v12"/><path d="M7 8h2M7 12h2M7 16h2"/></svg></span>Office &amp; Commercial</a>
+              <a href="services/airbnb-turnover.html"><span class="dd-ic"><svg class="svg-icon" viewBox="0 0 24 24"><circle cx="8" cy="8" r="4"/><path d="m11 11 9 9"/><path d="m16 16 2-2 3 3-2 2z"/></svg></span>Airbnb &amp; Rental Turnover</a>
+              <a href="services/janitorial.html"><span class="dd-ic"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 2h4v5h-4z"/><path d="M9 7h6l1 6H8z"/><path d="M8 13h8v9H8z"/></svg></span>Janitorial Services</a>
+              <a href="services/post-construction.html"><span class="dd-ic"><svg class="svg-icon" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V10l7-4 7 4v11"/><path d="M9 21v-6h6v6"/></svg></span>Post-Construction</a>
+              <a href="#services" class="dd-all">View All Services
+                <svg class="svg-icon" viewBox="0 0 24 24" style="margin-left:auto"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
           <a href="#about">About</a>
           <a href="#areas">Service Areas</a>
           <a href="#reviews">Reviews</a>
@@ -175,7 +192,22 @@
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
     </div>
-    <a class="drawer-link" href="#services">Services</a>
+    <div class="drawer-group">
+      <button class="drawer-sub-toggle" aria-expanded="false">
+        Services
+        <svg class="svg-icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="drawer-sub">
+        <a href="services/house-cleaning.html">Regular House Cleaning</a>
+        <a href="services/deep-cleaning.html">Deep Cleaning</a>
+        <a href="services/move-in-out.html">Move In &amp; Move Out</a>
+        <a href="services/commercial-cleaning.html">Office &amp; Commercial</a>
+        <a href="services/airbnb-turnover.html">Airbnb &amp; Rental Turnover</a>
+        <a href="services/janitorial.html">Janitorial Services</a>
+        <a href="services/post-construction.html">Post-Construction</a>
+        <a href="#services">View All Services</a>
+      </div>
+    </div>
     <a class="drawer-link" href="#about">About Us</a>
     <a class="drawer-link" href="#areas">Service Areas</a>
     <a class="drawer-link" href="#reviews">Reviews</a>
@@ -292,8 +324,8 @@
           <div class="service-body">
             <h3>Regular House Cleaning</h3>
             <p>Recurring weekly, bi-weekly, or monthly cleaning that keeps every
-              room fresh, dusted, and sanitized so your home always feels its best.</p>
-            <a href="#contact" class="service-link">Get a Quote
+              room fresh,               dusted, and sanitized so your home always feels its best.</p>
+            <a href="services/house-cleaning.html" class="service-link">Learn More
               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -309,7 +341,7 @@
             <h3>Deep Cleaning</h3>
             <p>A top to bottom reset that reaches baseboards, grout, appliances,
               and the neglected corners for a truly spotless, refreshed space.</p>
-            <a href="#contact" class="service-link">Get a Quote
+            <a href="services/deep-cleaning.html" class="service-link">Learn More
               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -325,7 +357,7 @@
             <h3>Move In and Move Out Cleaning</h3>
             <p>Start fresh or leave it spotless. We prepare empty homes for the
               next chapter with a thorough, deposit-friendly clean.</p>
-            <a href="#contact" class="service-link">Get a Quote
+            <a href="services/move-in-out.html" class="service-link">Learn More
               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -341,7 +373,7 @@
             <h3>Office and Commercial Cleaning</h3>
             <p>Keep your workplace polished and professional with dependable
               cleaning that impresses clients and supports a healthy team.</p>
-            <a href="#contact" class="service-link">Get a Quote
+            <a href="services/commercial-cleaning.html" class="service-link">Learn More
               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -357,7 +389,7 @@
             <h3>Airbnb and Rental Turnover</h3>
             <p>Five-star turnovers between guests, including fresh linens and a
               hotel-quality finish that earns glowing reviews for your listing.</p>
-            <a href="#contact" class="service-link">Get a Quote
+            <a href="services/airbnb-turnover.html" class="service-link">Learn More
               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -373,7 +405,7 @@
             <h3>Janitorial Services</h3>
             <p>Ongoing janitorial care for offices, clinics, and facilities, with
               flexible schedules that keep your space consistently pristine.</p>
-            <a href="#contact" class="service-link">Get a Quote
+            <a href="services/janitorial.html" class="service-link">Learn More
               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -389,7 +421,7 @@
             <h3>Post-Construction Cleaning</h3>
             <p>We clear the dust, debris, and residue after a build or remodel so
               your new space is move-in ready and immaculate.</p>
-            <a href="#contact" class="service-link">Get a Quote
+            <a href="services/post-construction.html" class="service-link">Learn More
               <svg class="svg-icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -866,11 +898,11 @@
         <div>
           <h5>Services</h5>
           <ul>
-            <li><a href="#services">House Cleaning</a></li>
-            <li><a href="#services">Deep Cleaning</a></li>
-            <li><a href="#services">Move In / Out</a></li>
-            <li><a href="#services">Airbnb Turnover</a></li>
-            <li><a href="#services">Commercial</a></li>
+            <li><a href="services/house-cleaning.html">House Cleaning</a></li>
+            <li><a href="services/deep-cleaning.html">Deep Cleaning</a></li>
+            <li><a href="services/move-in-out.html">Move In / Out</a></li>
+            <li><a href="services/airbnb-turnover.html">Airbnb Turnover</a></li>
+            <li><a href="services/commercial-cleaning.html">Commercial</a></li>
           </ul>
         </div>
 

@@ -1505,3 +1505,429 @@ h2.title {
     display: none;
   }
 }
+
+/* =========================================================
+   Nav dropdown (desktop)
+   ========================================================= */
+.nav-item {
+  position: relative;
+}
+
+.nav-item .nav-dd-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-item .nav-dd-toggle:hover {
+  color: var(--brand);
+}
+
+.nav-item .nav-dd-toggle .svg-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover .nav-dd-toggle .svg-icon {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  min-width: 300px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 70;
+}
+
+/* hover bridge so the menu does not close in the gap */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 16px;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 13px;
+  border-radius: 11px;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--ink);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-dropdown a:hover {
+  background: var(--bg-soft);
+  color: var(--brand);
+}
+
+.nav-dropdown a .dd-ic {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--bg-soft-2);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-dropdown a .dd-ic .svg-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-dropdown .dd-all {
+  margin-top: 6px;
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 11px 11px;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* =========================================================
+   Mobile drawer submenu
+   ========================================================= */
+.drawer-group {
+  border-bottom: 1px solid var(--line);
+}
+
+.drawer-sub-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: inherit;
+  padding: 15px 6px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.drawer-sub-toggle .svg-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--brand);
+  transition: transform 0.25s ease;
+}
+
+.drawer-group.open .drawer-sub-toggle .svg-icon {
+  transform: rotate(180deg);
+}
+
+.drawer-sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.drawer-sub a {
+  display: block;
+  padding: 12px 6px 12px 18px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--body);
+}
+
+.drawer-sub a:hover {
+  color: var(--brand);
+}
+
+/* =========================================================
+   Service pages
+   ========================================================= */
+.svc-hero {
+  position: relative;
+  background:
+    radial-gradient(1100px 460px at 88% -10%, rgba(0, 191, 255, 0.16), transparent 60%),
+    radial-gradient(760px 420px at 0% 10%, rgba(14, 62, 224, 0.07), transparent 55%),
+    var(--bg);
+  padding: 56px 0 76px;
+  overflow: hidden;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+}
+
+.breadcrumb a:hover {
+  color: var(--brand);
+}
+
+.breadcrumb .sep {
+  color: var(--line);
+}
+
+.breadcrumb .current {
+  color: var(--brand);
+}
+
+.svc-hero-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.svc-hero h1 {
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+  font-weight: 900;
+  margin: 16px 0 18px;
+}
+
+.svc-hero p.lead {
+  font-size: 1.12rem;
+  color: var(--body);
+  max-width: 540px;
+  margin-bottom: 28px;
+}
+
+.svc-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.svc-hero-media {
+  position: relative;
+}
+
+.svc-hero-media img {
+  width: 100%;
+  aspect-ratio: 4 / 3.4;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.svc-hero-media .hero-glow {
+  inset: -8% -6% auto auto;
+}
+
+/* Included section */
+.included-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 54px;
+  align-items: center;
+}
+
+.included-grid.reverse {
+  direction: rtl;
+}
+
+.included-grid.reverse > * {
+  direction: ltr;
+}
+
+.included-copy .eyebrow {
+  margin-bottom: 16px;
+}
+
+.included-copy h2 {
+  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
+  margin-bottom: 14px;
+}
+
+.included-copy > p {
+  color: var(--body);
+  margin-bottom: 24px;
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 22px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+.checklist .svg-icon {
+  width: 21px;
+  height: 21px;
+  color: var(--green-dark);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.included-media img {
+  width: 100%;
+  aspect-ratio: 4 / 4.2;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+}
+
+/* Benefits */
+.svc-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.svc-benefit {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  text-align: center;
+}
+
+.svc-benefit .icon-circle {
+  margin: 0 auto 16px;
+  background: var(--bg-soft-2);
+  color: var(--brand);
+  width: 56px;
+  height: 56px;
+}
+
+.svc-benefit h4 {
+  font-size: 1.14rem;
+  margin-bottom: 8px;
+}
+
+.svc-benefit p {
+  font-size: 0.96rem;
+  color: var(--body);
+}
+
+/* Gallery */
+.svc-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.svc-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Related services */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.related-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  font-weight: 700;
+  color: var(--ink);
+  transition: border-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.related-card:hover {
+  border-color: var(--brand);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+  color: var(--brand);
+}
+
+.related-card .icon-circle {
+  width: 42px;
+  height: 42px;
+  background: var(--bg-soft-2);
+  color: var(--brand);
+}
+
+.related-card .icon-circle .svg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .svc-hero-grid,
+  .included-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .included-grid.reverse {
+    direction: ltr;
+  }
+  .svc-hero-media,
+  .included-media {
+    max-width: 560px;
+    margin-inline: auto;
+    width: 100%;
+  }
+  .svc-benefits,
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .svc-gallery,
+  .svc-benefits,
+  .checklist,
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-hero {
+    padding: 36px 0 56px;
+  }
+}

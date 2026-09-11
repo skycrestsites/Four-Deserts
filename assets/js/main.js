@@ -38,6 +38,18 @@
     if (e.key === "Escape") closeDrawer();
   });
 
+  /* ---------- Mobile drawer submenu (Services) ---------- */
+  document.querySelectorAll(".drawer-sub-toggle").forEach(function (btn) {
+    var group = btn.closest(".drawer-group");
+    var sub = group ? group.querySelector(".drawer-sub") : null;
+    if (!sub) return;
+    btn.addEventListener("click", function () {
+      var isOpen = group.classList.toggle("open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      sub.style.maxHeight = isOpen ? sub.scrollHeight + "px" : null;
+    });
+  });
+
   /* ---------- Smooth scroll with sticky-header offset ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     var href = a.getAttribute("href");
