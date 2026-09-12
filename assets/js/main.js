@@ -116,50 +116,6 @@
     });
   }
 
-  /* ---------- Quote form (mailto handoff, no backend needed) ---------- */
-  var form = document.getElementById("quoteForm");
-  var success = document.getElementById("formSuccess");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      var name = (document.getElementById("name") || {}).value || "";
-      var phone = (document.getElementById("phone") || {}).value || "";
-      var email = (document.getElementById("email") || {}).value || "";
-      var service = (document.getElementById("service") || {}).value || "";
-      var message = (document.getElementById("message") || {}).value || "";
-
-      var subject = "Free Quote Request - " + (service || "Cleaning Service");
-      var lines = [
-        "Name: " + name,
-        "Phone: " + phone,
-        "Email: " + email,
-        "Service Needed: " + service,
-        "",
-        "Details:",
-        message,
-      ];
-      var body = lines.join("\n");
-
-      var mailto =
-        "mailto:ecarltonusa@gmail.com" +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
-
-      if (success) success.classList.add("show");
-      window.location.href = mailto;
-      form.reset();
-    });
-  }
-
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

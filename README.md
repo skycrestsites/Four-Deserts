@@ -45,9 +45,12 @@ npx serve .
 
 ## Notes for deployment
 
-- The quote form uses a `mailto:` handoff to `ecarltonusa@gmail.com`. To capture
-  submissions server side, connect the form in `assets/js/main.js` to a service
-  such as Formspree, Netlify Forms, or a custom endpoint.
+- Online booking and quotes are handled by the embedded BookingKoala widget in
+  the Contact section of `index.html`. The iframe uses a fixed height with
+  internal scrolling and does not load BookingKoala's `embed.js` in the parent
+  page, so it behaves like a normal viewport and BookingKoala modals stay inside
+  the iframe. Update the iframe `src` if the BookingKoala account or service
+  slug changes.
 - Update the canonical URL and Open Graph URLs in `index.html` if the final
   domain differs from `fourdesertscleaning.com`.
 - Replace the placeholder Facebook, Instagram, and Google links with the live

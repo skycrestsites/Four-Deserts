@@ -1931,3 +1931,90 @@ h2.title {
     padding: 36px 0 56px;
   }
 }
+
+/* =========================================================
+   Contact bar + BookingKoala embed
+   ========================================================= */
+.contact-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.contact-chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px;
+  transition: border-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  min-width: 0;
+}
+
+a.contact-chip:hover {
+  border-color: var(--brand);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-chip .icon-circle {
+  background: var(--bg-soft-2);
+  color: var(--brand);
+}
+
+.contact-chip .chip-text {
+  min-width: 0;
+}
+
+.contact-chip small {
+  display: block;
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.7rem;
+}
+
+.contact-chip .val {
+  display: block;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.booking-embed {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  padding: 8px;
+}
+
+.booking-embed iframe {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--radius-xl) - 8px);
+}
+
+@media (max-width: 1024px) {
+  .contact-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .contact-bar {
+    grid-template-columns: 1fr;
+  }
+  .booking-embed {
+    padding: 6px;
+  }
+}
