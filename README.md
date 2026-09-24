@@ -60,5 +60,5 @@ npx serve .
 
 ## Contact
 
-Phone: (575) 777-4266
+Phone: (575) 222-8732
 Email: ecarltonusa@gmail.com
