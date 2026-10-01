@@ -1,6 +1,6 @@
 # Four Deserts Cleaning Co. LLC - Website
 
-Premium, mobile-optimized marketing website for Four Deserts Cleaning Co. LLC,
+Mobile-optimized marketing website for Four Deserts Cleaning Co. LLC,
 serving Las Cruces and surrounding areas in New Mexico.
 
 Tagline: **Making the Desert Sparkle**
@@ -45,12 +45,9 @@ npx serve .
 
 ## Notes for deployment
 
-- Online booking and quotes are handled by the embedded BookingKoala widget in
-  the Contact section of `index.html`. The iframe uses a fixed height with
-  internal scrolling and does not load BookingKoala's `embed.js` in the parent
-  page, so it behaves like a normal viewport and BookingKoala modals stay inside
-  the iframe. Update the iframe `src` if the BookingKoala account or service
-  slug changes.
+- All calls to action across the site place a phone call to the business line
+  at (575) 222-8732 via `tel:` links. There is no booking portal or contact
+  form. Update the number in the HTML files if the business line changes.
 - Update the canonical URL and Open Graph URLs in `index.html` if the final
   domain differs from `fourdesertscleaning.com`.
 - Replace the placeholder Facebook, Instagram, and Google links with the live
@@ -61,4 +58,3 @@ npx serve .
 ## Contact
 
 Phone: (575) 222-8732
-Email: ecarltonusa@gmail.com

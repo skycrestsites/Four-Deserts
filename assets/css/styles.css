@@ -1933,13 +1933,18 @@ h2.title {
 }
 
 /* =========================================================
-   Contact bar + BookingKoala embed
+   Contact bar + call CTA
    ========================================================= */
 .contact-bar {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  margin-bottom: 40px;
+  margin: 0 auto 36px;
+  max-width: 940px;
+}
+
+.contact-cta {
+  text-align: center;
 }
 
 .contact-chip {
@@ -1989,32 +1994,23 @@ a.contact-chip:hover {
   white-space: nowrap;
 }
 
-.booking-embed {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  padding: 8px;
-}
-
-.booking-embed iframe {
-  display: block;
+.charity-image {
+  margin-top: 16px;
   width: 100%;
-  border-radius: calc(var(--radius-xl) - 8px);
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
 }
 
 @media (max-width: 1024px) {
   .contact-bar {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 620px;
   }
 }
 
 @media (max-width: 680px) {
   .contact-bar {
     grid-template-columns: 1fr;
-  }
-  .booking-embed {
-    padding: 6px;
   }
 }
