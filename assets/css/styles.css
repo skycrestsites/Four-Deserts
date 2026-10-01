@@ -344,13 +344,13 @@ h2.title {
 .nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 24px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .nav-links a {
@@ -358,6 +358,7 @@ h2.title {
   font-weight: 600;
   color: var(--ink);
   transition: color 0.15s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -376,6 +377,7 @@ h2.title {
   gap: 8px;
   font-weight: 700;
   color: var(--ink);
+  white-space: nowrap;
 }
 
 .nav-phone .svg-icon {
@@ -1434,7 +1436,7 @@ h2.title {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1160px) {
   .nav-links,
   .nav-phone {
     display: none;
